@@ -1,8 +1,8 @@
-namespace QuanLyCuaHang
+ï»¿namespace QuanLyCuaHang
 {
-    public partial class Form1 : Form
+    public partial class FormSignUp : Form
     {
-        public Form1()
+        public FormSignUp()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace QuanLyCuaHang
             }
             else
             {
-                MessageBox.Show("Thông tin ðãng nh?p chýa chính xác","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ThÃ´ng tin Ä‘Äƒng nháº­p chÆ°a chÃ­nh xÃ¡c","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
