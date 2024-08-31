@@ -1,4 +1,6 @@
-﻿namespace QuanLyCuaHang
+﻿using System.Data;
+using System.Data.SqlClient;
+namespace QuanLyCuaHang
 {
     public partial class FormSignUp : Form
     {
@@ -7,6 +9,7 @@
             InitializeComponent();
         }
 
+       
         private void label2_Click(object sender, EventArgs e)
         {
 

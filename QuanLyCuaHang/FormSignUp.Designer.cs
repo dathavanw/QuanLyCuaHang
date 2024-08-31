@@ -109,6 +109,7 @@
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(359, 34);
             txtPassword.TabIndex = 7;
+            txtPassword.UseSystemPasswordChar = true;
             // 
             // txtUserName
             // 
@@ -164,6 +165,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "FormSignUp";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Cửa hàng hoa của Đạt";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

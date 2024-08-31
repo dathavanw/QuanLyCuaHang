@@ -30,30 +30,31 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             panel1 = new Panel();
-            panel5 = new Panel();
-            label2 = new Label();
-            button11 = new Button();
-            button10 = new Button();
-            button9 = new Button();
-            button8 = new Button();
-            button7 = new Button();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            label3 = new Label();
             panel4 = new Panel();
             label1 = new Label();
+            panel5 = new Panel();
+            label2 = new Label();
+            btnSuppliers = new Button();
+            btnOrders = new Button();
+            btnProduct = new Button();
+            btnCustomers = new Button();
+            panelShow = new Panel();
+            panel6 = new Panel();
+            btnInvoices = new Button();
             panel2 = new Panel();
             button6 = new Button();
             button5 = new Button();
             button4 = new Button();
             button3 = new Button();
-            button2 = new Button();
+            btnQuanLyKhachHangMenu = new Button();
             button1 = new Button();
             panel3 = new Panel();
             pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
-            panel5.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
             panel4.SuspendLayout();
+            panel5.SuspendLayout();
+            panelShow.SuspendLayout();
+            panel6.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -61,27 +62,49 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.Controls.Add(panel4);
             panel1.Controls.Add(panel5);
-            panel1.Controls.Add(button11);
-            panel1.Controls.Add(button10);
-            panel1.Controls.Add(button9);
-            panel1.Controls.Add(button8);
-            panel1.Controls.Add(button7);
-            panel1.Controls.Add(flowLayoutPanel1);
-            panel1.Location = new Point(231, 3);
+            panel1.Controls.Add(btnSuppliers);
+            panel1.Controls.Add(btnOrders);
+            panel1.Controls.Add(btnProduct);
+            panel1.Controls.Add(btnCustomers);
+            panel1.Controls.Add(panelShow);
+            panel1.Location = new Point(229, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(747, 494);
+            panel1.Size = new Size(805, 498);
             panel1.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel4.BackColor = SystemColors.HotTrack;
+            panel4.Controls.Add(label1);
+            panel4.Location = new Point(2, 3);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(803, 109);
+            panel4.TabIndex = 8;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            label1.ForeColor = SystemColors.Control;
+            label1.Location = new Point(38, 34);
+            label1.Name = "label1";
+            label1.Size = new Size(256, 38);
+            label1.TabIndex = 2;
+            label1.Text = "Welcome Admin";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
-            panel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel5.AutoSize = true;
+            panel5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel5.BackColor = SystemColors.Highlight;
             panel5.Controls.Add(label2);
-            panel5.Location = new Point(0, 411);
+            panel5.Location = new Point(0, 460);
             panel5.Name = "panel5";
-            panel5.Size = new Size(747, 83);
+            panel5.Size = new Size(805, 38);
             panel5.TabIndex = 6;
             // 
             // label2
@@ -89,128 +112,96 @@
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 163);
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(16, 41);
+            label2.Location = new Point(12, 7);
             label2.Name = "label2";
             label2.Size = new Size(312, 23);
             label2.TabIndex = 1;
             label2.Text = "Địa chỉ : Quảng Xương - Thanh Hóa";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // button11
+            // btnSuppliers
             // 
-            button11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            button11.AutoSize = true;
-            button11.BackColor = SystemColors.MenuHighlight;
-            button11.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            button11.ForeColor = SystemColors.Window;
-            button11.Location = new Point(506, 291);
-            button11.Name = "button11";
-            button11.Size = new Size(194, 67);
-            button11.TabIndex = 5;
-            button11.Text = "Nhà Cung Cấp";
-            button11.UseVisualStyleBackColor = false;
+            btnSuppliers.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnSuppliers.BackColor = SystemColors.MenuHighlight;
+            btnSuppliers.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
+            btnSuppliers.ForeColor = SystemColors.Window;
+            btnSuppliers.Location = new Point(564, 295);
+            btnSuppliers.Name = "btnSuppliers";
+            btnSuppliers.Size = new Size(194, 67);
+            btnSuppliers.TabIndex = 5;
+            btnSuppliers.Text = "Nhà Cung Cấp";
+            btnSuppliers.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // btnOrders
             // 
-            button10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            button10.AutoSize = true;
-            button10.BackColor = SystemColors.MenuHighlight;
-            button10.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            button10.ForeColor = SystemColors.Window;
-            button10.Location = new Point(287, 291);
-            button10.Name = "button10";
-            button10.Size = new Size(198, 67);
-            button10.TabIndex = 4;
-            button10.Text = "Nhập Hàng";
-            button10.UseVisualStyleBackColor = false;
+            btnOrders.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnOrders.BackColor = SystemColors.MenuHighlight;
+            btnOrders.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
+            btnOrders.ForeColor = SystemColors.Window;
+            btnOrders.Location = new Point(345, 295);
+            btnOrders.Name = "btnOrders";
+            btnOrders.Size = new Size(198, 67);
+            btnOrders.TabIndex = 4;
+            btnOrders.Text = "Nhập Hàng";
+            btnOrders.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // btnProduct
             // 
-            button9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            button9.AutoSize = true;
-            button9.BackColor = SystemColors.MenuHighlight;
-            button9.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            button9.ForeColor = SystemColors.Window;
-            button9.Location = new Point(60, 170);
-            button9.Name = "button9";
-            button9.Size = new Size(167, 188);
-            button9.TabIndex = 3;
-            button9.Text = "Tạo Hóa Đơn";
-            button9.UseVisualStyleBackColor = false;
+            btnProduct.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnProduct.BackColor = SystemColors.MenuHighlight;
+            btnProduct.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
+            btnProduct.ForeColor = SystemColors.Window;
+            btnProduct.Location = new Point(564, 174);
+            btnProduct.Name = "btnProduct";
+            btnProduct.Size = new Size(194, 67);
+            btnProduct.TabIndex = 2;
+            btnProduct.Text = "Quản Lý Sản Phẩm";
+            btnProduct.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // btnCustomers
             // 
-            button8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            button8.AutoSize = true;
-            button8.BackColor = SystemColors.MenuHighlight;
-            button8.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            button8.ForeColor = SystemColors.Window;
-            button8.Location = new Point(506, 170);
-            button8.Name = "button8";
-            button8.Size = new Size(194, 67);
-            button8.TabIndex = 2;
-            button8.Text = "Quản Lý Sản Phẩm";
-            button8.UseVisualStyleBackColor = false;
+            btnCustomers.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnCustomers.BackColor = SystemColors.MenuHighlight;
+            btnCustomers.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
+            btnCustomers.ForeColor = SystemColors.Window;
+            btnCustomers.Location = new Point(345, 174);
+            btnCustomers.Name = "btnCustomers";
+            btnCustomers.Size = new Size(198, 67);
+            btnCustomers.TabIndex = 1;
+            btnCustomers.Text = "Quản Lý Khách Hàng";
+            btnCustomers.UseVisualStyleBackColor = false;
+            btnCustomers.Click += btnCustomers_Click;
             // 
-            // button7
+            // panelShow
             // 
-            button7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            button7.AutoSize = true;
-            button7.BackColor = SystemColors.MenuHighlight;
-            button7.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            button7.ForeColor = SystemColors.Window;
-            button7.Location = new Point(287, 170);
-            button7.Name = "button7";
-            button7.Size = new Size(198, 67);
-            button7.TabIndex = 1;
-            button7.Text = "Quản Lý Khách Hàng";
-            button7.UseVisualStyleBackColor = false;
+            panelShow.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelShow.Controls.Add(panel6);
+            panelShow.Location = new Point(0, 115);
+            panelShow.Name = "panelShow";
+            panelShow.Size = new Size(805, 381);
+            panelShow.TabIndex = 7;
             // 
-            // flowLayoutPanel1
+            // panel6
             // 
-            flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            flowLayoutPanel1.AutoSize = true;
-            flowLayoutPanel1.BackColor = SystemColors.MenuHighlight;
-            flowLayoutPanel1.Controls.Add(label3);
-            flowLayoutPanel1.Controls.Add(panel4);
-            flowLayoutPanel1.Location = new Point(-318, 3);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1062, 106);
-            flowLayoutPanel1.TabIndex = 0;
+            panel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel6.Controls.Add(btnInvoices);
+            panel6.Location = new Point(3, 3);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(799, 345);
+            panel6.TabIndex = 0;
             // 
-            // label3
+            // btnInvoices
             // 
-            label3.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label3.ForeColor = SystemColors.Control;
-            label3.Location = new Point(3, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(312, 99);
-            label3.TabIndex = 2;
-            label3.Text = "Welcome Admin ";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
-            label3.Click += label3_Click;
-            // 
-            // panel4
-            // 
-            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel4.BackColor = SystemColors.Highlight;
-            panel4.Controls.Add(label1);
-            panel4.Location = new Point(321, 3);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(738, 93);
-            panel4.TabIndex = 0;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(54, 32);
-            label1.Name = "label1";
-            label1.Size = new Size(219, 35);
-            label1.TabIndex = 0;
-            label1.Text = "Welcome Admin";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            btnInvoices.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnInvoices.BackColor = SystemColors.MenuHighlight;
+            btnInvoices.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
+            btnInvoices.ForeColor = SystemColors.Window;
+            btnInvoices.Location = new Point(67, 58);
+            btnInvoices.Name = "btnInvoices";
+            btnInvoices.Size = new Size(240, 186);
+            btnInvoices.TabIndex = 3;
+            btnInvoices.Text = "Tạo Hóa Đơn";
+            btnInvoices.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -219,7 +210,7 @@
             panel2.Controls.Add(button5);
             panel2.Controls.Add(button4);
             panel2.Controls.Add(button3);
-            panel2.Controls.Add(button2);
+            panel2.Controls.Add(btnQuanLyKhachHangMenu);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(panel3);
             panel2.Location = new Point(3, 3);
@@ -267,15 +258,16 @@
             button3.Text = "Quản Lý Sản Phẩm";
             button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnQuanLyKhachHangMenu
             // 
-            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button2.Location = new Point(0, 214);
-            button2.Name = "button2";
-            button2.Size = new Size(222, 56);
-            button2.TabIndex = 3;
-            button2.Text = "Quản Lý Khách Hàng";
-            button2.UseVisualStyleBackColor = true;
+            btnQuanLyKhachHangMenu.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnQuanLyKhachHangMenu.Location = new Point(0, 214);
+            btnQuanLyKhachHangMenu.Name = "btnQuanLyKhachHangMenu";
+            btnQuanLyKhachHangMenu.Size = new Size(222, 56);
+            btnQuanLyKhachHangMenu.TabIndex = 3;
+            btnQuanLyKhachHangMenu.Text = "Quản Lý Khách Hàng";
+            btnQuanLyKhachHangMenu.UseVisualStyleBackColor = true;
+            btnQuanLyKhachHangMenu.Click += btnQuanLyKhachHangMenu_Click;
             // 
             // button1
             // 
@@ -310,18 +302,19 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(980, 499);
+            ClientSize = new Size(1036, 503);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Chào mừng bạn làm việc ";
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            flowLayoutPanel1.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            panelShow.ResumeLayout(false);
+            panel6.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -336,19 +329,19 @@
         private Button button5;
         private Button button4;
         private Button button3;
-        private Button button2;
+        private Button btnQuanLyKhachHangMenu;
         private Button button1;
         private Button button6;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private Panel panel4;
         private Panel panel5;
-        private Button button11;
-        private Button button10;
-        private Button button9;
-        private Button button8;
-        private Button button7;
-        private Label label1;
+        private Button btnSuppliers;
+        private Button btnOrders;
+        private Button btnInvoices;
+        private Button btnProduct;
+        private Button btnCustomers;
         private Label label2;
-        private Label label3;
+        private Panel panelShow;
+        private Panel panel6;
+        private Panel panel4;
+        private Label label1;
     }
 }
